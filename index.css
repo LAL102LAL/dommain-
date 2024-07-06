@@ -317,13 +317,11 @@ footer {
     }
 
     .card {
-        max-width: 90%;
-        margin: 1rem 0;
+        max-width: calc(100% - 20px); /* 10px margin on each side */
+        margin: 10px 0; /* Vertical margin */
+        padding: 10px; /* Padding inside the card */
     }
 }
-
-
-
 
 @media (max-width: 480px) {
     h1 {
@@ -343,7 +341,14 @@ footer {
     }
 
     .card {
-        max-width: 100%;
-        margin: 1rem 0;
+        width: 90%;
+       
+        margin: 5px; /* Margin on all sides */
+        padding: 10px; /* Padding inside the card */
     }
 }
+
+
+
+
+
