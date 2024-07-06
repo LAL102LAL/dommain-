@@ -14,6 +14,32 @@ body {
 }
 
 
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('football-stadium-night-generative-ai.jpg'); /* Path to your local image */
+    background-size: cover;
+    opacity: 0.2; /* Low opacity */
+    z-index: 1;
+    border-radius: 12px; /* Match border radius */
+}
+
+
+
+body > * {
+    position: relative; /* Ensure content is on top of pseudo-element */
+    z-index: 2; /* Higher stacking order */
+}
+
+body:hover {
+    transform: translateY(-10px); /* Example of hover effect */
+}
+
+
 header {
     width: 100%;
     background-color: #092635; /* Dark background color */
@@ -48,6 +74,9 @@ main {
     padding: 2rem;
   
     margin-bottom: 2rem;
+    border: 1px solid #ccc; /* Example border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Example shadow */
    
 }
 
@@ -87,6 +116,9 @@ main {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
+    border: 1px solid #ccc; /* Example border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Example shadow */
 }
 
 #joinButton:hover {
@@ -104,8 +136,10 @@ main {
     position: relative;
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
     padding: 2rem;
+    border: 1px solid #ccc; /* Example border */
     border-radius: 12px; /* Rounded corners */
-   
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Example shadow */
+
     margin: 1rem;
     flex: 1 1 45%;
     max-width: 45%;
@@ -152,11 +186,109 @@ main {
 }
 
 .accuracy {
-    margin-top: 03rem;
+    margin-top: auto; /* Pushes the element to the bottom */
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
+    padding-top: 1rem; /* Optional padding for spacing */
+  }
+  .About {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 2rem;
+    border-color: #fff;
+    border-radius: 12px; /* Rounded corners */
+    margin: 1rem;
+    flex: 1 1 45%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #ccc; /* Example border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Example shadow */
+    text-align: center; /* Center align text */
+    color: #fff; /* White text color for better readability */
 }
+
+.About::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    opacity: 0.2; /* Low opacity */
+    z-index: 1;
+    border-radius: 12px; /* Match border radius */
+}
+
+
+
+.About > * {
+    position: relative; /* Ensure content is on top of pseudo-element */
+    z-index: 2; /* Higher stacking order */
+}
+
+.About:hover {
+    transform: translateY(-10px); /* Example of hover effect */
+}
+
+
+
+.About h2 {
+    color: #3DC2EC;
+}
+
+.accuracy {
+    color: #9EC8B9;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.social-icons {
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.social-icons a.youtube {
+    color: #FF0000; /* YouTube Red */
+}
+
+.social-icons a.telegram {
+    color: #0088cc; /* Telegram Blue */
+}
+
+.fab:hover {
+    transform: translateY(-10px); /* Example of hover effect */
+}
+
+.social-icons a.instagram {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* WebKit-specific property */
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.social-icons a.instagram i {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* WebKit-specific property */
+    -webkit-text-fill-color: transparent;
+}
+
+.social-icons a.whatsapp {
+    color: #25D366; /* WhatsApp Green */
+}
+
+
 
 footer {
     margin-top: 2rem;
@@ -189,6 +321,9 @@ footer {
         margin: 1rem 0;
     }
 }
+
+
+
 
 @media (max-width: 480px) {
     h1 {
